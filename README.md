@@ -20,3 +20,11 @@ This will launch an ECS Cluster, that deploys a wordpress docker container, and 
 
 Ensure you have AWS credentials in your device.
 `terraform init && terraform apply`
+
+Terraform will output the URL after the apply is complete, copy it into the browser and wordpress will load up for you to set up.
+
+```bash
+Outputs:
+
+loadbalancer_url = wp-lb-1272703147.eu-west-2.elb.amazonaws.com
+```
