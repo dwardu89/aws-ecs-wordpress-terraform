@@ -13,14 +13,14 @@ module "ec2-profile" {
 
 
 module "wordpress" {
-  source     = "./service-wordpress"
-  cluster_id = module.ecs.this_ecs_cluster_id
-  aws_lb_target_group_arn     = aws_lb_target_group.wordpress.arn
+  source                  = "./service-wordpress"
+  cluster_id              = module.ecs.this_ecs_cluster_id
+  aws_lb_target_group_arn = aws_lb_target_group.wordpress.arn
 
-  db_host = module.db.this_db_instance_endpoint
-  db_user = local.db_user
+  db_host     = module.db.this_db_instance_endpoint
+  db_user     = local.db_user
   db_password = local.db_password
-  db_name = local.db_name
+  db_name     = local.db_name
 }
 
 data "aws_ami" "amazon_linux_ecs" {

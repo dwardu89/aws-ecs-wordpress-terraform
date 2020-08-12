@@ -81,7 +81,7 @@ resource "aws_lb" "lb" {
   security_groups    = [aws_security_group.wordpress.id, module.vpc.default_security_group_id]
   subnets            = module.vpc.public_subnets
 
-  enable_deletion_protection = false 
+  enable_deletion_protection = false
 
 
   tags = {
@@ -105,6 +105,6 @@ resource "aws_lb_target_group" "wordpress" {
   protocol = "HTTP"
   vpc_id   = module.vpc.vpc_id
   health_check {
-  matcher = "200-299,302"
+    matcher = "200-299,302"
   }
 }
