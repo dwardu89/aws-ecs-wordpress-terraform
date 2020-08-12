@@ -15,3 +15,8 @@ The service should be logically separated into 3 distinct areas:
 This is done all through terraform. It should not be run in production especially since passwords are hardcoded, and should only be used for example purposes.
 
 This will launch an ECS Cluster, that deploys a wordpress docker container, and also an RDS database as a backend.
+
+## How to spin up
+
+Ensure you have AWS credentials in your device.
+`terraform init && terraform apply`
